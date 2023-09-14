@@ -14,5 +14,8 @@ export class ItemService {
     return this.items;
   }
 
+  getItem(item: item): void {
+    this.items.push(item);
+  }
 
 }
