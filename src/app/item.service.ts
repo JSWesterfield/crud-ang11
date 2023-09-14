@@ -18,4 +18,11 @@ export class ItemService {
     this.items.push(item);
   }
 
+  updateItem(updatedItem: Item): void {
+    const index = this.items.findIndex((item) => item.id === updatedItem.id);
+    if (index !== -1) {
+      this.items[index] = updatedItem;
+    }
+  } 
+
 }
