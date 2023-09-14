@@ -25,4 +25,8 @@ export class ItemService {
     }
   } 
 
+  deleteItem(id: number): void {
+    this.items = this.items.filter((item) => item.id !== id );
+  }
+
 }
