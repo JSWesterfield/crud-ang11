@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Item } from './item.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ItemService {
 
-  constructor() { }
+export class ItemService {
+  private items: Item[] = [];
+
+  constructor() {}
+
+  getAllItems(): Item[] {
+    return this.items;
+  }
+
+
 }
